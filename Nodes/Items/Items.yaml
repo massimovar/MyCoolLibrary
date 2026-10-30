@@ -1,0 +1,77 @@
+Name: Items
+Type: FolderType
+Children:
+- Name: MySpecialButton
+  Type: ObjectLibraryItem
+  Description: {"LocaleId":"","Text":"Author: Massimo\n"}
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "9244cc4acc3cdfadc261fe226b33cec4"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=62a0db631cc50c532692101473cd0a67
+- Name: Folder1
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "81ce7fbc7e64ce8b417b1563d021c5c2"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 3
+  - Name: Folder1
+    Type: FolderType
+    Children:
+    - Class: Reference
+      Type: HasOwnedType
+      Target: g=5012285e48e633ca181634f5dc8fbdbe
+- Name: Rectangle1
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "0bd1b6a42750af3ae194b7ba9c194015"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 3
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=5012285e48e633ca181634f5dc8fbdbe
+- Name: TestEnum
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "458571ca4d6288a5591b65e3eb9cf649"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 3
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=5e69e45d8d2218e5c5f410fd1aa0c5fd
+- Name: Variable1
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "690779ccd9027c42cda19b1fc40d1be1"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 2
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=8f925e679c9f8223b711fbfbd547be41

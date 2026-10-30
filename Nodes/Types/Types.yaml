@@ -1,0 +1,120 @@
+Name: Types
+Type: FolderType
+Children:
+- Name: MySpecialButton
+  Id: g=62a0db631cc50c532692101473cd0a67
+  Supertype: Button
+  ReferenceType: HasComponent
+  Children:
+  - Name: Text
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    ModellingRule: Optional
+    Value: {"LocaleId":"en-US","Text":"Button1"}
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 390.0
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 280.0
+  - Name: LeftMargin
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 100.0
+  - Name: TopMargin
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 40.0
+  - Name: BackgroundColor
+    Type: BaseDataVariableType
+    DataType: Color
+    ModellingRule: Optional
+    Value: "#ffff00"
+  - Name: FontSize
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 20.0
+  - Name: TextPosition
+    Type: BaseDataVariableType
+    DataType: Position
+    ModellingRule: Optional
+    Value: 5
+- Class: DataType
+  Name: TestEnum
+  Id: g=5e69e45d8d2218e5c5f410fd1aa0c5fd
+  Supertype: Enumeration
+  EnumDefinition: 
+   {
+    "Name": "TestEnum",
+    "DataType": {
+     "IdType": 2,
+     "Id": "5e69e45d8d2218e5c5f410fd1aa0c5fd",
+     "Namespace": 4
+    },
+    "Fields": [{
+      "Name": "Value0",
+      "Value": 0,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "test 0"
+      }
+     },{
+      "Name": "Value1",
+      "Value": 1,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "test 1"
+      }
+     }]
+   }
+  Children:
+  - Name: ns=0;EnumValues
+    Type: BaseDataVariableType
+    DataType: EnumValueType
+    ModellingRule: None
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"LocaleId":"en-US","Text":"test 0"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"LocaleId":"en-US","Text":"test 1"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+- Name: Rectangle1
+  Id: g=5012285e48e633ca181634f5dc8fbdbe
+  Supertype: Rectangle
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 690.0
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 550.0
+  - Name: Object1
+    Type: BaseObjectType
+    Children:
+    - Name: Variable1
+      Type: BaseDataVariableType
+      DataType: TestEnum
+  - Name: Label1
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/NewHMIProject1/Model/Variable1"
+- Name: Variable1
+  Id: g=8f925e679c9f8223b711fbfbd547be41
+  Supertype: BaseDataVariableType
+  DataType: TestEnum
